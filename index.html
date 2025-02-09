@@ -1,1 +1,81 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- Fixed missing closing bracket -->
+    <title>Jules Goy</title>
+</head>
+<body>
+    <header>
+        <!-- Navigation Banner -->
+        <nav class="banner">
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">My Projects</a></li>
+                <li><a href="#find-me">Where Can You Find Me</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Sections -->
+        <section id="about"><h2>About Me</h2>
+            <p> 
+                I am a French student in software development, specialized in front-end and back-end development for the design 
+                and implementation of software solutions according to business needs. <br>
+
+                My studies include the main programming languages, web development, system and network administration, 
+                database management, and project management. In my current specialization, "Réalisation d'applications : conception, 
+                développement, validation", I am acquiring skills in the development and maintenance of complex applications, performing 
+                automated testing, and ensuring continuous integration. These skills apply to various fields: web, mobile, finance, 
+                healthcare, and game development.<br>
+
+                But beyond that, actually, what I learn is to create solutions for others to solve problems and improve their work 
+                lives. At the same time, I am deepening one of my biggest passions, video game development. <br>
+            </p>
+        </section>
+        <section id="projects"><h2>My Projects</h2>
+            <ul>
+                <li><a href="https://github.com/Witchoy/Torrington">Torrington</a>
+                    <p>Torrington is a serious game developed by a team of three as 
+                        part of a university project. The game aims to teach players 
+                        about the process of selecting academic programs at a university. 
+                        Built using Godot and C#, it integrates concepts from our management, 
+                        law, and development courses, applying everything we learned 
+                        throughout our years at uni.</p></li>
+                <li><a href="https://github.com/Witchoy/witchoy.github.io">This website</a>
+                    <p>This personal website marks the beginning of my journey into web 
+                        development. So far, I’ve built it using only HTML, CSS, and JavaScript,
+                         but I hope to explore frameworks in the future. My goal is to integrate
+                          React and Next.js to expand the site with additional pages, new features, 
+                          and maybe even a few hidden surprises.</p></li>
+            </ul>
+        </section>
+        <section id="find-me"><h2>Where Can You Find Me</h2>
+            <a href="https://www.linkedin.com/in/jules-goy">Linkedin</a>
+                <p>Let’s connect ! I'm open to discussions about development, 
+                    internships, and collaborations.</p>
+            <a href="https://github.com/Witchoy">My Github</a>
+                <p>Check out my projects and contributions !</p>
+        </section>
+        <section id="contact"><h2>Contact</h2>
+            <form id="contact-form" action="submit" method="POST">
+                <h2>Contact Me</h2>
+                
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" required>
+        
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="content">Content</label>
+                <textarea id="content" name="content" rows="5" required></textarea>
+        
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
