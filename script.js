@@ -1,34 +1,26 @@
-
-document.addEventListener("DOMContentLoaded", function() {
-    var contactForm = document.getElementById('contact-form');
-    document.getElementById("btnSubmit").addEventListener("click", function() {
-        console.log("Button clicked !");
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
     });
 });
 
+// Form submission handler
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert("Submition not configured !")
+});
 
-//   /!\ NOT WORKING /!\
-//NEEDS A FRAMEWORK TO DO SO
-// Direct Email sending
-
-document.getElementById('contactform').addEventListener('submit', function(event) {
-    event.preventDefault();  // Prevents the default form submission
-
-    const title = document.getElementById('title').value;
-    const email = document.getElementById('email').value;
-    const content = document.getElementById('content').value;
-
-    // Check the content in the console
-    console.log("Title: ", title);
-    console.log("Email: ", email);
-    console.log("Content: ", content);
-
-    // validation
-    if (title && email && content) {
-        alert("Message Sent!");
-        // Xlear the form
-        document.getElementById('contact-form').reset();
-    } else {
-        alert("Please fill in all fields!");
-    }
+// Add loading animation for images
+document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('load', function () {
+        this.style.opacity = '1';
+    });
 });
