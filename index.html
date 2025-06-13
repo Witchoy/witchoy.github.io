@@ -15,6 +15,7 @@
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#projects">My Projects</a></li>
                 <li><a href="#find-me">Find Me</a></li>
+                <li><a href="#games">Games</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -90,6 +91,80 @@
             </div>
         </section>
 
+        <section id="games">
+            <h1>Games</h1>
+
+            <div id="snake-container">
+                <h2>Snake</h2>
+                <button id="snakestartButton" onclick="startSnake()">Start!</button>
+                <div id="snake-controls">
+                    <label for="speed-select">Speed:</label>
+                    <select name="speeds" id="speed-select">
+                        <option value="slow">Slow</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="fast">Fast</option>
+                    </select>
+
+                    <label for="snake-gridSize">Grid size:</label>
+                    <input id="snake-gridSize" type="number" min="5" max="25" value="10">
+                </div>
+
+                <h3 id="snake-scoreLabel">Score: 0</h3>
+
+                <canvas id="grid" width="250" height="250"></canvas>
+            </div>
+
+            <div id="hangman-container">
+                <h2> Hangman </h2>
+                <button id="startButton" onclick="startHangman()">Start!</button>
+                <label for="language-select">Language:</label>
+                <select name="languages" id="language-select">
+                    <option value="fr">Français</option>
+                    <option value="en" selected>English</option>
+                </select>
+
+                <br>
+
+                <canvas id="drawing" width="250" height="250"></canvas>
+
+                <div id="word"></div>
+
+                <hr>
+
+                <div id="alphabet">
+                    <button class="letter" id="A" onClick="letterPressed('A')">A</button>
+                    <button class="letter" id="B" onClick="letterPressed('B')">B</button>
+                    <button class="letter" id="C" onClick="letterPressed('C')">C</button>
+                    <button class="letter" id="D" onClick="letterPressed('D')">D</button>
+                    <button class="letter" id="E" onClick="letterPressed('E')">E</button>
+                    <button class="letter" id="F" onClick="letterPressed('F')">F</button>
+                    <button class="letter" id="G" onClick="letterPressed('G')">G</button>
+                    <button class="letter" id="H" onClick="letterPressed('H')">H</button>
+                    <button class="letter" id="I" onClick="letterPressed('I')">I</button>
+                    <button class="letter" id="J" onClick="letterPressed('J')">J</button>
+                    <button class="letter" id="K" onClick="letterPressed('K')">K</button>
+                    <button class="letter" id="L" onClick="letterPressed('L')">L</button>
+                    <button class="letter" id="M" onClick="letterPressed('M')">M</button>
+                    <button class="letter" id="N" onClick="letterPressed('N')">N</button>
+                    <button class="letter" id="O" onClick="letterPressed('O')">O</button>
+                    <button class="letter" id="P" onClick="letterPressed('P')">P</button>
+                    <button class="letter" id="Q" onClick="letterPressed('Q')">Q</button>
+                    <button class="letter" id="R" onClick="letterPressed('R')">R</button>
+                    <button class="letter" id="S" onClick="letterPressed('S')">S</button>
+                    <button class="letter" id="T" onClick="letterPressed('T')">T</button>
+                    <button class="letter" id="U" onClick="letterPressed('U')">U</button>
+                    <button class="letter" id="V" onClick="letterPressed('V')">V</button>
+                    <button class="letter" id="W" onClick="letterPressed('W')">W</button>
+                    <button class="letter" id="X" onClick="letterPressed('X')">X</button>
+                    <button class="letter" id="Y" onClick="letterPressed('Y')">Y</button>
+                    <button class="letter" id="Z" onClick="letterPressed('Z')">Z</button>
+                </div>
+
+            </div>
+
+
+        </section>
+
         <section id="contact">
             <form id="contact-form" action="submit" method="POST">
                 <h2>Contact Me</h2>
@@ -119,6 +194,8 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="snake.js"></script>
+    <script src="hangman.js"></script>
 </body>
 
 </html>
