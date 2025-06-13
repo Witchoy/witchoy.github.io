@@ -1,4 +1,4 @@
-/* Reset and base styles */ 
+/* Reset and base styles */
 * {
     margin: 0;
     padding: 0;
@@ -230,6 +230,101 @@ p:hover {
 
 #projects li p:hover {
     transform: none;
+}
+
+/* SNAKE */
+
+#snake-container {
+    text-align: center;
+    background-color: #F9F4EA;
+    padding: 20px 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+canvas {
+    border: 2px solid #333;
+    margin-top: 10px;
+    background-color: #F9F4EA;
+}
+
+#snake-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+#snake-controls label {
+    margin: 0 0.3rem;
+    font-weight: 600;
+}
+
+#snake-controls select,
+#snake-controls input {
+    width: auto;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* HANGMAN */
+#hangman-container {
+    margin-top: 25px;
+    text-align: center;
+    background-color: #F9F4EA;
+    padding: 20px 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#hangman-container select {
+    width: auto;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+#hangman-container hr {
+    border: none;
+    height: 2px;
+    background: #605F4B;
+    margin: 40px auto;
+    width: 80%;
+    border-radius: 4px;
+}
+
+#hangman-container span {
+    display: inline-block;
+}
+
+#alphabet {
+    width: 75%;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.empty-letter {
+    width: 48px;
+    height: 48px;
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    background-color: #facebd;
+    border: 2px solid #C47455;
+    border-radius: 6px;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
 }
 
 /* Social links */
